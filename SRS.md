@@ -45,3 +45,16 @@ El sistema se integrará con los siguientes componentes de software:
 - Base de datos para almacenamiento de información de los registros
 - Servidor web para el procesamiento de registros
 - Servidor web para el procesamiento de generacion de informes.
+
+### Requerimientos funcionales
+
+- RF1: Un endpoint para crear incidentes con campos
+- RF2: Un endpoint para listar incidentes
+- RF3: Un endpoint para el detalle del incidente
+- RF4: Un endpoint para el resumen por zonas
+
+## Arquitectura
+
+La arquitectura del proyecto es una aplicación en tres capas: 
+Un frontend que consume una API REST construida con FastAPI, la cual expone endpoints para registrar, listar y reportar incidentes; dicha API usa modelos SQLAlchemy para persistir datos en una base (Postgres) y guarda archivos en una carpeta uploads persistida, mientras que la orquestación y despliegue en contenedores se maneja con Dockerfile y docker-compose.yml para ejecutar el servicio backend y la base de datos.
+
