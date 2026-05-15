@@ -58,3 +58,4 @@ El sistema se integrará con los siguientes componentes de software:
 La arquitectura del proyecto es una aplicación en tres capas: 
 Un frontend que consume una API REST construida con FastAPI, la cual expone endpoints para registrar, listar y reportar incidentes; dicha API usa modelos SQLAlchemy para persistir datos en una base (Postgres) y guarda archivos en una carpeta uploads persistida, mientras que la orquestación y despliegue en contenedores se maneja con Dockerfile y docker-compose.yml para ejecutar el servicio backend y la base de datos.
 
+![alt text](img/Arqui.png)
